@@ -1,7 +1,7 @@
 import "./App.css";
 import LandDetails from "./LandDetails";
 import ResultScreen from "./ResultScreen";
-import { HashRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
