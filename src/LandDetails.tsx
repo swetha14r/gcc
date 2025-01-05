@@ -132,7 +132,7 @@ const LandDetails = () =>{
                 feeValue += rate*totalBuiltUp;
             }
             if(totalBuiltUp>=41){
-                rate = 11.5*db;
+                rate = 15.5*db;
                 feeValue += rate*(totalBuiltUp - 40);
             }
             if(totalBuiltUp>=101){
