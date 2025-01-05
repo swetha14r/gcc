@@ -309,7 +309,7 @@ const LandDetails = () =>{
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         result.buildingLicenseFee = handleCalcBuildingLicenseFee(formData.totalBuiltUp, formData.wellOTHSump, formData.compoundWall, formData.wef, formData.proposedType);
-        result.demolitionFee = handleDemolitionFee(formData.existingTiled, formData.existingOther, formData.existingFirst, formData.wef, formData.compoundWall);
+        result.demolitionFee = handleDemolitionFee(formData.existingTiled, formData.existingOther, formData.existingFirst, formData.wef);
         result.roadCutCharges = handleRoadCutCharges(formData.wef,formData.roadType,formData.roadWidth/2);
         result.securityDeposit = handleSecurityDeposit(formData.totalBuiltUp);
         result.tentativeImprCharges = handleTentativeCharges(formData.proposedPlot/2, formData.roadWidth);
