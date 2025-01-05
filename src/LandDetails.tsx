@@ -179,12 +179,12 @@ const LandDetails = () =>{
         
       }
 
-      const handleDemolitionFee = (groundFloor: number, groundFloorOther: number, firstFloor: number, wef: boolean, compoundWall: number) =>{
+      const handleDemolitionFee = (groundFloor: number, groundFloorOther: number, firstFloor: number, wef: boolean) =>{
         let feeValue=0, db=1;
         if(wef){
             db=2;
         }
-        feeValue = groundFloor*110*db + groundFloorOther*90*db + firstFloor*70*db + compoundWall*70*db;
+        feeValue = groundFloor*110*db + groundFloorOther*90*db + firstFloor*70*db;
         return feeValue
       }
 
