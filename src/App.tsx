@@ -1,21 +1,19 @@
-import './App.css'
-import LandDetails from './LandDetails'
-import ResultScreen from './ResultScreen'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import "./App.css";
+import LandDetails from "./LandDetails";
+import ResultScreen from "./ResultScreen";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-
   return (
     <>
       <Router>
         <Routes>
-          <Route path='/gcc' element={<LandDetails />} />
-          <Route path='/gcc/result' element={<ResultScreen />} />
+          <Route path="/" element={<LandDetails />} />
+          <Route path="/result" element={<ResultScreen />} />
         </Routes>
       </Router>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
