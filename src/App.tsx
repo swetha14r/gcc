@@ -9,8 +9,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<LandDetails />} />
-          <Route path='/result' element={<ResultScreen />} />
+          <Route path='/gcc' element={<LandDetails />} />
+          <Route path='/gcc/result' element={<ResultScreen />} />
         </Routes>
       </Router>
 
