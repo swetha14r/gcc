@@ -25,6 +25,7 @@ interface FormData {
   whetherTent: boolean;
   whetherReg244: boolean;
   wef: boolean;
+  wef29: boolean;
   buildingHeight: number;
   plinth: number;
 }
@@ -64,6 +65,7 @@ const LandDetails = () => {
     whetherTent: false,
     whetherReg244: false,
     wef: false,
+    wef29: false,
     buildingHeight: 0,
     plinth: 0,
   });
@@ -212,20 +214,20 @@ const LandDetails = () => {
       db = 2;
     }
     feeValue =
-      groundFloor * 110 * db +
-      groundFloorOther * 90 * db +
+      groundFloor * 90 * db +
+      groundFloorOther * 110 * db +
       firstFloor * 70 * db;
     return feeValue;
   };
 
   const handleRoadCutCharges = (
-    wef: boolean,
+    wef29: boolean,
     roadType: string,
     halfRoadWidth: number
   ) => {
     let feeValue = 0;
     console.log(roadType);
-    if (wef) {
+    if (wef29) {
       //after
       if (roadType === "rt3") {
         feeValue = halfRoadWidth * 5515;
@@ -365,7 +367,7 @@ const LandDetails = () => {
       formData.wef
     );
     result.roadCutCharges = handleRoadCutCharges(
-      formData.wef,
+      formData.wef29,
       formData.roadType,
       formData.roadWidth / 2
     );
@@ -528,6 +530,19 @@ const LandDetails = () => {
           <select
             required
             name="wef"
+            onChange={handleChange}
+            className="form-select w-auto"
+          >
+            <option value="">--Choose--</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <div className="col-md-12 d-flex align-items-center">
+          <b className="me-3">Calculation w.e.f 29/02/2024? </b>
+          <select
+            name="wef29"
             onChange={handleChange}
             className="form-select w-auto"
           >
